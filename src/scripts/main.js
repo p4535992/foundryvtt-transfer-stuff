@@ -18,7 +18,7 @@ export const setupHooks = () => {
 export const readyHooks = async () => {
   // Add any additional hooks if necessary
 
-  if (!game.user.isGM && enableEvenForGM) {
+  if (!game.user.isGM) {
     //@ts-ignore
     libWrapper.register(
       CONSTANTS.MODULE_ID,

@@ -2,7 +2,7 @@
 	"name": "transfer-stuff",
 	"title": "Transfer Stuff",
 	"description": "Move (rather than copy) items and currency drag-and-dropped between character sheets.",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"main": "module.js",
 	"license": "SEE LICENSE IN LICENSE",
 	"private": true,
