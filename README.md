@@ -96,8 +96,10 @@ Any issues, bugs, or feature requests are always welcome to be reported directly
 
 ## License
 
+- [Backpack Manager](https://github.com/krbz999/backpack-manager) with [MIT](https://github.com/krbz999/backpack-manager/blob/master/LICENSE)
+
 This package is under an [MIT license](LICENSE) and the [Foundry Virtual Tabletop Limited License Agreement for module development](https://foundryvtt.com/article/license/).
 
 ## Credit
 
-Thanks to anyone who helps me with this code! I appreciate the user community's feedback on this project!
+- Thanks to [krbz999 (aka Zhell)](https://github.com/krbz999/) for the module [Backpack Manager](https://github.com/krbz999/backpack-manager)
