@@ -14,8 +14,6 @@
 
 [![Translation status](https://weblate.foundryvtt-hub.com/widgets/transfer-stuff-dnd5e/-/287x66-black.png)](https://weblate.foundryvtt-hub.com/engage/transfer-stuff-dnd5e/)
 
-### If you want to buy me a coffee [![alt-text](https://img.shields.io/badge/-Patreon-%23ff424d?style=for-the-badge)](https://www.patreon.com/p4535992)
-
 Enable moving (rather than cloning) inventory and currencies between actors by dragging and dropping.
 
 This module is born on v10 as a personal fork of the module [TransferStuff](https://github.com/playest/TransferStuff), but on v11 i decide to fork the amazing project [Backpack Manager](https://github.com/krbz999/backpack-manager) and modify just a few line of code for make this module.
