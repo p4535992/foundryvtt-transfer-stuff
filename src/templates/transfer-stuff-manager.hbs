@@ -8,9 +8,9 @@
       <div class="currency-item" data-denom="{{curr.class}}">
         <label class="denomination {{curr.class}}">{{curr.label}}</label>
         <div class="item currency">
-          <a data-action="takeCurrency"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+          <a data-action="takeCurrency"><i class="fa-solid fa-arrow-right"></i></a>
           <input type="number" class="current" value="{{curr.max.targetActor}}" disabled>
-          <a data-action="stowCurrency"><i class="fa-solid fa-box-archive"></i></a>
+          <a data-action="stowCurrency"><i class="fa-solid fa-arrow-left"></i></a>
         </div>
       </div>
       {{/each}}
@@ -41,9 +41,9 @@
             <a data-type="more"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
           {{/if}}
-          <a data-type="retrieve"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+          <a data-type="retrieve"><i class="fa-solid fa-arrow-down"></i></a>
           {{#unless ../hideOwnInventory}}
-          <a data-type="delete"><i class="fa-solid fa-trash"></i></a>
+          <!--<a data-type="delete"><i class="fa-solid fa-trash"></i></a>-->
           {{/unless}}
         </div>
       </div>
@@ -73,7 +73,7 @@
             <a data-type="more"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
           {{/if}}
-          <a data-type="stow"><i class="fa-solid fa-box-archive"></i></a>
+          <a data-type="stow"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
       </div>
       {{/each}}
