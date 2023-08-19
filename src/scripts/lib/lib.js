@@ -147,7 +147,7 @@ export async function onDropItemTransferStuff(wrapped, ...args) {
   const targetActor = this.actor;
   let itemToCheck = fromUuidSync(itemCurrent.uuid);
   if (!itemToCheck.actor) {
-    return wrapped(args);
+    return this._onDropItem(event, itemCurrent);
   }
   let sourceActor = itemToCheck.actor;
   if (!sourceActor || !targetActor) {
