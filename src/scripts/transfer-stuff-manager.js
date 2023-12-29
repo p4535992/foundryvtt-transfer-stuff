@@ -198,7 +198,7 @@ export class TransferStuffManager extends Application {
   /**
    * Adjust the currency on the viewing Actor and the transferStuffTargetActor Actor.
    * @param {PointerEvent} event      The initiating click event.
-   * @returns {Actor[]}               The two updated Actor documents.
+   * @returns {Promise<Actor[]>}      The two updated Actor documents.
    */
   async _adjustCurrency(event) {
     const data = event.target.closest(".currency-item").dataset;
@@ -252,7 +252,7 @@ export class TransferStuffManager extends Application {
    * @param {Item} item             The item or stack to transfer.
    * @param {number} value          The quantity to transfer.
    * @param {number} max            The maximum stack size.
-   * @returns {boolean}             Whether transfer was completed.
+   * @returns {Promise<boolean>}      Whether transfer was completed.
    */
   async _handleItemTransfer(sourceActor, targetActor, item, value, max) {
     // if for some ungodly reason, you put yourself in yourself:
