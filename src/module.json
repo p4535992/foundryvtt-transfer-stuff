@@ -1,7 +1,7 @@
 {
   "id": "transfer-stuff",
-  "title": "Transfer Stuff",
-  "description": "Move (rather than copy) items and currency drag-and-dropped between character sheets.",
+  "title": "Transfer Stuff & BackPack Manager",
+  "description": "Move (rather than copy) items and currency drag-and-dropped between character sheets with a helpful UI to manage external actors that act as backpacks.",
   "version": "1.4.3",
   "authors": [
     {
@@ -104,6 +104,12 @@
         "compatibility": {}
       }
     ],
-    "conflicts": []
+    "conflicts": [],
+    "optional": [
+        {
+            "id": "variant-encumbrance-dnd5e",
+            "type": "module"
+        }
+    ]
   }
 }
