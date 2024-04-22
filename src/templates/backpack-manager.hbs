@@ -1,7 +1,7 @@
 <div class="content">
   <section class="currency">
     <header>
-      <div class="header-name">{{localize "BACKPACK_MANAGER.Currencies"}}</div>
+      <div class="header-name">{{localize "transfer-stuff.Currencies"}}</div>
     </header>
     <ol class="currency-content">
       {{#each currencies as |curr|}}
@@ -21,7 +21,7 @@
 
     {{#unless hideOwnInventory}}
     <header {{#if collapsed.bag}}class="collapsed"{{/if}} data-action="collapse" data-header="bag">
-      <div class="header-name">{{localize 'BACKPACK_MANAGER.Stowed'}}: {{bag}}</div>
+      <div class="header-name">{{localize 'transfer-stuff.Stowed'}}: {{bag}}</div>
       {{#if showCapacity}}<div class="header-encumbrance">({{bagValue}} / {{bagMax}})</div>{{/if}}
     </header>
     {{/unless}}
@@ -52,7 +52,7 @@
 
     {{#unless hideOwnInventory}}
     <header {{#if collapsed.actor}}class="collapsed"{{/if}} data-action="collapse" data-header="actor">
-      <div class="header-name">{{localize 'BACKPACK_MANAGER.Inventory'}}: {{actor}}</div>
+      <div class="header-name">{{localize 'transfer-stuff.Inventory'}}: {{actor}}</div>
       <div class="header-encumbrance">({{actorValue}} / {{actorMax}})</div>
     </header>
 

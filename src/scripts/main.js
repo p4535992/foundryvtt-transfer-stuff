@@ -2,7 +2,8 @@ import { setApi } from "../module.js";
 import API from "./API/api.js";
 import CONSTANTS from "./constants/constants.js";
 import BackPackManagerHelpers from "./lib/backpack-manager-helpers.js";
-import { onDropItemTransferStuff } from "./lib/lib.js";
+import TransferStuffHelpers from "./lib/transfer-stuff-helpers.js";
+
 export const initHooks = () => {
     // setup all the hooks
     //   Hooks.once("socketlib.ready", registerSocket);
@@ -30,7 +31,7 @@ export const readyHooks = async () => {
         libWrapper.register(
             CONSTANTS.MODULE_ID,
             "game.dnd5e.applications.actor.ActorSheet5eCharacter.prototype._onDropItem",
-            onDropItemTransferStuff,
+            TransferStuffHelpers.onDropItemTransferStuff,
             "MIXED", //'OVERRIDE',
         );
     } else {
@@ -38,7 +39,7 @@ export const readyHooks = async () => {
             libWrapper.register(
                 CONSTANTS.MODULE_ID,
                 "game.dnd5e.applications.actor.ActorSheet5eCharacter.prototype._onDropItem",
-                onDropItemTransferStuff,
+                TransferStuffHelpers.onDropItemTransferStuff,
                 "MIXED", //'OVERRIDE',
             );
         }
@@ -48,7 +49,7 @@ export const readyHooks = async () => {
         libWrapper.register(
             CONSTANTS.MODULE_ID,
             "game.dnd5e.applications.actor.ActorSheet5eNPC.prototype._onDropItem",
-            onDropItemTransferStuff,
+            TransferStuffHelpers.onDropItemTransferStuff,
             "MIXED", //'OVERRIDE',
         );
     }
@@ -57,7 +58,7 @@ export const readyHooks = async () => {
         libWrapper.register(
             CONSTANTS.MODULE_ID,
             "game.dnd5e.applications.actor.ActorSheet5eVehicle.prototype._onDropItem",
-            onDropItemTransferStuff,
+            TransferStuffHelpers.onDropItemTransferStuff,
             "MIXED", //'OVERRIDE',
         );
     }

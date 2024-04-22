@@ -148,13 +148,18 @@ export class BackpackManager extends Application {
         super.activateListeners(html);
         html[0].querySelectorAll("[data-action]").forEach((n) => {
             const action = n.dataset.action;
-            if (action === "close") n.addEventListener("click", this.close.bind(this));
-            else if (action === "collapse") n.addEventListener("click", this._handleCollapse.bind(this));
+            if (action === "close") {
+                n.addEventListener("click", this.close.bind(this));
+            } else if (action === "collapse") {
+                n.addEventListener("click", this._handleCollapse.bind(this));
+            }
         });
         html[0].addEventListener("click", async (event) => {
             const a = event.target.closest("a");
-            if (!a) return;
-            const app = a.closest(".backpack-manager .content");
+            if (!a) {
+                return;
+            }
+            const app = a.closest(".transfer-stuff .content");
             app.style.pointerEvents = "none";
             const type = a.dataset.type ?? a.dataset.action;
 
@@ -231,8 +236,8 @@ export class BackpackManager extends Application {
     async _adjustCurrency(event) {
         const data = event.target.closest(".currency-item").dataset;
         const type = event.target.closest("A").dataset.action === "takeCurrency" ? "take" : "stow";
-        const ph = game.i18n.localize("BACKPACK_MANAGER.AdjustCurrency" + type.capitalize());
-        const ct = game.i18n.format("BACKPACK_MANAGER.AdjustCurrencyContentAmounts", {
+        const ph = game.i18n.localize("transfer-stuff.AdjustCurrency" + type.capitalize());
+        const ct = game.i18n.format("transfer-stuff.AdjustCurrencyContentAmounts", {
             actor: this.actor.system.currency[data.denom],
             bag: this.bag.system.currency[data.denom],
             denom: data.denom,
@@ -248,10 +253,10 @@ export class BackpackManager extends Application {
       </div>
     </form>`;
         const amount = await Dialog.prompt({
-            title: game.i18n.localize("BACKPACK_MANAGER.AdjustCurrency"),
+            title: game.i18n.localize("transfer-stuff.AdjustCurrency"),
             content,
             rejectClose: false,
-            label: game.i18n.localize("BACKPACK_MANAGER.AdjustCurrencyLabel" + type.capitalize()),
+            label: game.i18n.localize("transfer-stuff.AdjustCurrencyLabel" + type.capitalize()),
             callback: (html) => html[0].querySelector("input").valueAsNumber,
         });
         if (!amount) return;

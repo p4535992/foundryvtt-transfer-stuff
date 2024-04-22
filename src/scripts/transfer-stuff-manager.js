@@ -1,6 +1,6 @@
 import CONSTANTS from "./constants/constants.js";
-import { isValidItem, setSystemSpecificValues, updateSystemSpecificQuantity, warn } from "./lib/lib.js";
 import Logger from "./lib/Logger.js";
+import TransferStuffHelpers from "./lib/transfer-stuff-helpers.js";
 
 export class TransferStuffManager extends Application {
     constructor(object, options = {}) {
@@ -32,7 +32,7 @@ export class TransferStuffManager extends Application {
     get stowed() {
         return this.targetActor.items
             .filter((item) => {
-                return isValidItem(item);
+                return TransferStuffHelpers.isValidItem(item);
             })
             .sort((a, b) => {
                 return a.name.localeCompare(b.name);
@@ -46,7 +46,7 @@ export class TransferStuffManager extends Application {
     get items() {
         return this.actor.items
             .filter((item) => {
-                return isValidItem(item);
+                return TransferStuffHelpers.isValidItem(item);
             })
             .sort((a, b) => {
                 return a.name.localeCompare(b.name);
@@ -121,12 +121,17 @@ export class TransferStuffManager extends Application {
         super.activateListeners(html);
         html[0].querySelectorAll("[data-action]").forEach((n) => {
             const action = n.dataset.action;
-            if (action === "close") n.addEventListener("click", this.close.bind(this));
-            else if (action === "collapse") n.addEventListener("click", this._handleCollapse.bind(this));
+            if (action === "close") {
+                n.addEventListener("click", this.close.bind(this));
+            } else if (action === "collapse") {
+                n.addEventListener("click", this._handleCollapse.bind(this));
+            }
         });
         html[0].addEventListener("click", async (event) => {
             const a = event.target.closest("a");
-            if (!a) return;
+            if (!a) {
+                return;
+            }
             const app = a.closest(".transfer-stuff .content");
             app.style.pointerEvents = "none";
             const type = a.dataset.type ?? a.dataset.action;
@@ -262,7 +267,7 @@ export class TransferStuffManager extends Application {
             return false;
         }
         const itemData = item.toObject();
-        const create = await setSystemSpecificValues(itemData, {
+        const create = await TransferStuffHelpers.setSystemSpecificValues(itemData, {
             quantity: value,
             target: targetActor,
             src: sourceActor,
@@ -270,15 +275,21 @@ export class TransferStuffManager extends Application {
 
         // Create new item if not otherwise handled.
         let mayDelete = false;
-        if (!create) mayDelete = true;
-        else {
+        if (!create) {
+            mayDelete = true;
+        } else {
             const [c] = await targetActor.createEmbeddedDocuments("Item", [itemData]);
-            if (c) mayDelete = true;
+            if (c) {
+                mayDelete = true;
+            }
         }
 
         if (mayDelete) {
-            if (value === max) await item.delete({ itemsWithSpells5e: { alsoDeleteChildSpells: true } });
-            else await updateSystemSpecificQuantity(item, max, value);
+            if (value === max) {
+                await item.delete({ itemsWithSpells5e: { alsoDeleteChildSpells: true } });
+            } else {
+                await TransferStuffHelpers.updateSystemSpecificQuantity(item, max, value);
+            }
             return true;
         }
         return false;
