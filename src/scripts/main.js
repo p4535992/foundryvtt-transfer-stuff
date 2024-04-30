@@ -1,4 +1,3 @@
-import { setApi } from "../module.js";
 import API from "./API/api.js";
 import CONSTANTS from "./constants/constants.js";
 import BackPackManagerHelpers from "./lib/backpack-manager-helpers.js";
@@ -11,7 +10,7 @@ export const initHooks = () => {
 };
 
 export const setupHooks = () => {
-    setApi(API);
+    game.modules.get(CONSTANTS.MODULE_ID).api = API;
 
     if (game.system.id === "dnd5e") {
         Hooks.on("renderItemSheet", (sheet, html) => {

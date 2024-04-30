@@ -85,7 +85,13 @@ export default class BackPackManagerHelpers {
         if (sheet.item.type !== "backpack" && sheet.item.type !== "container") {
             return;
         }
-        const label = html[0].querySelector("[name='system.capacity.weightless']").closest("label");
+        // const label = html[0].querySelector("[name='system.capacity.weightless']").closest("label");
+        // commons.js:2070 Error: The `system.capacity.weightless` value on containers has migrated to the 'weightlessContents' property.
+        const label = html[0].querySelector("[name='system.properties.weightlessContents']")?.closest("label");
+        if (!label) {
+            Logger.error(`No label is been founded for the backpack manager feature`);
+            return;
+        }
 
         const name = `flags.${CONSTANTS.MODULE_ID}.containerActorUuid`;
         const value = sheet.item.flags[CONSTANTS.MODULE_ID]?.containerActorUuid ?? "";

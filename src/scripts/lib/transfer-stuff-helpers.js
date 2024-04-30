@@ -1,3 +1,4 @@
+import CONSTANTS from "../constants/constants";
 import { TransferStuffManager } from "../transfer-stuff-manager";
 
 export default class TransferStuffHelpers {
@@ -55,7 +56,23 @@ export default class TransferStuffHelpers {
         const targetActor = this.actor;
         let itemToCheck = fromUuidSync(itemCurrent.uuid);
         if (!itemToCheck.actor) {
-            return this._onDropItem(event, itemCurrent);
+            // return this._onDropItem(event, itemCurrent);
+            const data = itemCurrent;
+            // FROM ORIGINAL
+            if (!this.actor.isOwner) {
+                return false;
+            }
+            const item = await Item.implementation.fromDropData(data);
+
+            // Handle moving out of container & item sorting
+            if (this.actor.uuid === item.parent?.uuid) {
+                if (item.system.container !== null) {
+                    await item.update({ "system.container": null });
+                }
+                return this._onSortItem(event, item.toObject());
+            }
+
+            return this._onDropItemCreate(item);
         }
         let sourceActor = itemToCheck.actor;
         if (!sourceActor || !targetActor) {
