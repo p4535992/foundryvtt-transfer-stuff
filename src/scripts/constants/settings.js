@@ -1,16 +1,16 @@
 import CONSTANTS from "./constants.js";
 
 const SETTINGS = {
-  // Client settings
+    // Client settings
 
-  // Module Settings
-  debug: "debug",
+    // Module Settings
+    debug: "debug",
 
-  // Style settings
+    // Style settings
 
-  // System Settings
+    // System Settings
 
-  // Hidden settings
+    // Hidden settings
 };
 
 export default SETTINGS;
