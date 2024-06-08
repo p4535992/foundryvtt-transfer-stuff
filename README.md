@@ -1,4 +1,4 @@
-### Transfer Stuff
+# Transfer Stuff and BackPack Manager
 
 ![Latest Release Download Count](https://img.shields.io/github/downloads/p4535992/foundryvtt-transfer-stuff/latest/module.zip?color=2b82fc&label=DOWNLOADS&style=for-the-badge)
 
@@ -18,11 +18,11 @@ This project is therefore a fork of [Backpack Manager](https://github.com/krbz99
 
 This module is born on v10 as a personal fork of the module [TransferStuff](https://github.com/playest/TransferStuff), but on v11 i decide to fork the amazing project [Backpack Manager](https://github.com/krbz999/backpack-manager) and modify just a few line of code for make this module, it is also the successor to backpack manager because the original author who created it for Dnd5e [has officially abandoned it in favor of system logic](https://github.com/krbz999/backpack-manager/issues/30), but I feel that with the logic of "one for all" it can still offer something, so I or integrated the old Back Pack Manager module feature as well.
 
-# Feature: Transfer stuff
+## Feature: Transfer stuff
 
 Enable moving (rather than cloning) inventory and currencies between actors by dragging and dropping from a owned actor sheet to another.
 
-# Feature: Backpack Manager
+## Feature: Backpack Manager
 
 Make container management easy for your players. This module is useful for you if you:
 - Like managing the containers and inventory of your character.
