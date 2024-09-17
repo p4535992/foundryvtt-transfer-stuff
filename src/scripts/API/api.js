@@ -1,5 +1,5 @@
-import BackPackManagerHelpers from "../lib/backpack-manager-helpers";
-import TransferStuffHelpers from "../lib/transfer-stuff-helpers";
+import BackPackManagerHelpers from "../lib/backpack-manager-helpers.js";
+import TransferStuffHelpers from "../lib/transfer-stuff-helpers.js";
 
 const API = {
     renderManagerTransferStuff(actor, backpack, options = {}) {

@@ -1,5 +1,6 @@
-import CONSTANTS from "../constants/constants";
-import { TransferStuffManager } from "../transfer-stuff-manager";
+import CONSTANTS from "../constants/constants.js";
+import { TransferStuffManager } from "../transfer-stuff-manager.js";
+import Logger from "./Logger.js";
 
 export default class TransferStuffHelpers {
     /* Whether this is a valid item to put in a backpack. */

@@ -1,5 +1,6 @@
-import CONSTANTS from "./constants/constants";
-import BackPackManagerHelpers from "./lib/backpack-manager-helpers";
+import CONSTANTS from "./constants/constants.js";
+import Logger from "./lib/Logger.js";
+import BackPackManagerHelpers from "./lib/backpack-manager-helpers.js";
 
 export class BackpackManager extends Application {
     constructor(object, options = {}) {

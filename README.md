@@ -154,14 +154,6 @@ npm run-script lint:fix
 npm run-script build:json
 ```
 
-### build:clean
-
-`build:clean` clean packs json sources in `src/packs/_source`. NOTE: usually this command is launched after the command `build:json` and after make some modifications on the json source files with some text editor, but before the `build:db`
-
-```bash
-npm run-script build:clean
-```
-
 ### build:db
 
 `build:db` packs the json db sources in `src/packs/_source` to LevelDB pack on `src/packs` with the new jsons. NOTE: usually this command is launched after the command `build:json` and after make some modifications on the json source files with some text editor

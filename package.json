@@ -2,7 +2,7 @@
 	"name": "transfer-stuff",
 	"title": "Transfer Stuff",
 	"description": "Move (rather than copy) items and currency drag-and-dropped between character sheets.",
-	"version": "1.4.3",
+	"version": "12.0.0",
 	"main": "module.js",
 	"license": "SEE LICENSE IN LICENSE",
 	"private": true,
@@ -27,7 +27,7 @@
 	},
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.23.10",
-		"@foundryvtt/foundryvtt-cli": "^1.0.2",
+		"@foundryvtt/foundryvtt-cli": "^1.0.3",
 		"@rollup/plugin-node-resolve": "^15.2.3",
 		"@typescript-eslint/eslint-plugin": "^7.1.1",
 		"@typhonjs-config/eslint-config": "^0.6.3",

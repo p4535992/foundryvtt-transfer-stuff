@@ -1,6 +1,6 @@
-import { BackpackManager } from "../backpack-manager";
-import CONSTANTS from "../constants/constants";
-import Logger from "./Logger";
+import { BackpackManager } from "../backpack-manager.js";
+import CONSTANTS from "../constants/constants.js";
+import Logger from "./Logger.js";
 
 export default class BackPackManagerHelpers {
     /* Whether this is a valid item to put in a backpack. */
