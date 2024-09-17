@@ -16,7 +16,7 @@
 
 This project is therefore a fork of [Backpack Manager](https://github.com/krbz999/backpack-manager) made for a personal use case, which I make available to all with [krbz999 (aka Zhell)](https://github.com/krbz999/) approval.
 
-This module is born on v10 as a personal fork of the module [TransferStuff](https://github.com/playest/TransferStuff), but on v11 i decide to fork the amazing project [Backpack Manager](https://github.com/krbz999/backpack-manager) and modify just a few line of code for make this module, it is also the successor to backpack manager because the original author who created it for Dnd5e [has officially abandoned it in favor of system logic](https://github.com/krbz999/backpack-manager/issues/30), but I feel that with the logic of "one for all" it can still offer something, so I or integrated the old Back Pack Manager module feature as well.
+This module is born on v10 as a personal fork of the module [TransferStuff](https://github.com/playest/TransferStuff), but on v11 i decide to fork the amazing project [Backpack Manager](https://github.com/krbz999/backpack-manager) and modify just a few line of code for make this module, it is also the successor to backpack manager because the original author who created it for Dnd5e [has officially abandoned it in favor of system logic](https://github.com/krbz999/backpack-manager/issues/30), but I feel that with the logic of "one for all" it can still offer something, so I have integrated the old Back Pack Manager module feature as well.
 
 ## Feature: Transfer stuff
 
