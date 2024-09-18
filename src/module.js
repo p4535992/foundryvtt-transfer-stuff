@@ -14,9 +14,7 @@
 // Import TypeScript modules
 import { registerSettings } from "./scripts/settings.js";
 import { initHooks, readyHooks, setupHooks } from "./scripts/main.js";
-import { error, i18n, warn } from "./scripts/lib/lib.js";
 import CONSTANTS from "./scripts/constants/constants.js";
-import API from "./scripts/API/api.js";
 import Logger from "./scripts/lib/Logger.js";
 
 /* ------------------------------------ */

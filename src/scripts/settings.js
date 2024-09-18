@@ -1,4 +1,3 @@
-import { debug, log, warn, i18n } from "./lib/lib.js";
 import CONSTANTS from "./constants/constants.js";
 import SETTINGS from "./constants/settings.js";
 

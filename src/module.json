@@ -2,7 +2,7 @@
     "id": "transfer-stuff",
     "title": "Transfer Stuff & BackPack Manager",
     "description": "Move (rather than copy) items and currency drag-and-dropped between character sheets with a helpful UI to manage external actors that act as backpacks.",
-    "version": "1.4.5",
+    "version": "12.0.0",
     "authors": [
         {
             "name": "playest",
@@ -26,20 +26,7 @@
             "email": ""
         }
     ],
-    "type": "module",
     "socket": true,
-    "includes": [
-        "./assets/**",
-        "./lang/**",
-        "./languages/**",
-        "./scripts/**",
-        "./styles/**",
-        "./templates/**",
-        "./module.json",
-        "./README.md",
-        "./icons/**",
-        "./packs/**"
-    ],
     "media": [
         {
             "type": "icon",
@@ -62,18 +49,17 @@
         }
     ],
     "packs": [],
-    "systems": [],
     "scripts": [],
     "esmodules": ["module.js"],
     "styles": ["styles/transfer-stuff.css"],
     "compatibility": {
-        "minimum": 11,
-        "verified": 11,
+        "minimum": 12,
+        "verified": 12,
         "maximum": 12
     },
     "url": "https://github.com/p4535992/foundryvtt-transfer-stuff",
-    "manifest": "https://github.com/p4535992/foundryvtt-transfer-stuff/releases/download/1.4.5/module.json",
-    "download": "https://github.com/p4535992/foundryvtt-transfer-stuff/releases/download/1.4.5/module.zip",
+    "manifest": "https://github.com/p4535992/foundryvtt-transfer-stuff/releases/download/12.0.0/module.json",
+    "download": "https://github.com/p4535992/foundryvtt-transfer-stuff/releases/download/12.0.0/module.zip",
     "readme": "https://github.com/p4535992/foundryvtt-transfer-stuff/blob/master/README.md",
     "changelog": "https://github.com/p4535992/foundryvtt-transfer-stuff/blob/master/CHANGELOG.md",
     "bugs": "https://github.com/p4535992/foundryvtt-transfer-stuff/issues",
